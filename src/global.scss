@@ -14,10 +14,15 @@
     --danger: #E25858;
   }
 
-//   :focus {
-//       outline: transparent;
-//       box-shadow: 0 0 0 2px var(--green-500);
-//   }
+  button {
+    background: transparent;
+    border: none;
+  }
+  
+  :focus {
+      outline: transparent;
+    //   box-shadow: 0 0 0 2px var(--green-500);
+  }
 
 * {
     margin: 0;
