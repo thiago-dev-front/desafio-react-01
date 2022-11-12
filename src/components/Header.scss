@@ -1,0 +1,10 @@
+.content {
+    background: #0D0D0D;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__img {
+        max-width: 100%;
+    }
+}
