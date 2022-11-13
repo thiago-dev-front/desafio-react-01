@@ -1,0 +1,23 @@
+.listItemOff {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 64px;
+    border-top: 1px solid #808080;
+    
+    h2 {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 1.4;
+        margin-top: 16px;
+    }
+    p {
+        font-family: 'Inter';
+        font-style: normal;
+        font-size: 16px;
+        line-height: 1.4;
+    }
+}

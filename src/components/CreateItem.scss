@@ -29,14 +29,14 @@ main {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                padding: 16px;
-                width: 90px;
-                height: 52px;
                 background: var(--blueDark);
                 border-radius: 8px;
                 
                 button {
+                    width: 90px;
+                    height: 52px;
                     display: flex;
+                    padding: 16px;
                     justify-content: center;
                     align-items: center;
                     gap: 8px;
@@ -46,6 +46,67 @@ main {
                     font-size: 14px;
                     color: var(--gray-100);
                     cursor: pointer;
+                }
+            }
+        }
+        &__tasks-active {
+            display: flex;
+            justify-content: space-between;
+            margin: 36px 0 24px;
+            &__create {
+                display: flex;
+                gap: 8px;
+                span {
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 14px;
+                    color: var(--blue);
+                }
+                div {
+                    width: 25px;
+                    height: 19px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 999px;
+                    background: var(--gray-400);
+                    strong {
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 12px;
+                        line-height: 15px;
+                        color: var(--gray-200);
+                    }
+                }
+            }
+            &__complete {
+                display: flex;
+                gap: 8px;
+                span {
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 14px;
+                    color: var(--purple);
+                }
+                div {
+                    width: 25px;
+                    height: 19px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 999px;
+                    background: var(--gray-400);
+                    strong {
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 12px;
+                        line-height: 15px;
+                        color: var(--gray-200);
+                    }
                 }
             }
         }
