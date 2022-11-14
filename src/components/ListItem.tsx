@@ -1,6 +1,13 @@
 import "./ListItem.scss";
-import {Trash} from 'phosphor-react'
-export function ListItem() {
+import {Trash} from 'phosphor-react';
+
+interface TaskProps {
+  id: number
+  content: string
+  isChecked: boolean
+}
+
+export function ListItem({id, content, isChecked} : TaskProps ) {
   return (
     <div className="list-topic">
       <div className="list-topic__content">
@@ -9,7 +16,7 @@ export function ListItem() {
           <label htmlFor="checkbox"></label>
         </div>
         <div className="list-topic__content__text">
-            <p>Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</p>
+            <p>{content}</p>
         </div>
         <div className="list-topic__content__icon">
               <Trash size={24} />
