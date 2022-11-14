@@ -2,6 +2,26 @@ import "./CreateItem.scss";
 import { ListItemOff } from "./ListItemOff";
 import { PlusCircle } from "phosphor-react";
 import { ChangeEvent, FormEvent, useState } from "react";
+import { v4 as uuidv4 } from 'uuid';
+import { ListItem } from "./ListItem";
+
+const tasks = [
+  {
+    id: uuidv4(),
+    content: 'shuhdusudahdouahouhdoawiwqhdiq',
+    isChecked: false
+  },
+  {
+    id: uuidv4(),
+    content: 'testetesttddygywgdywgudggwudwod',
+    isChecked: false
+  },
+  {
+    id: uuidv4(),
+    content: 'kdlskdljdlsdkdkwbdwkodbojwvdojwd',
+    isChecked: false
+  }
+]
 
 export function CreateItem() {
   const [newText , setNewText] = useState('')
@@ -43,6 +63,19 @@ export function CreateItem() {
             </div>
           </div>
         </div>
+
+        {
+        tasks.map(task => {
+          return (
+            <ListItem 
+              key={task.id}
+              content={task.content}
+              isChecked={task.isChecked}
+            
+            />
+          )
+        })
+      }
         <ListItemOff />
       </div>
     </main>

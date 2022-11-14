@@ -2,7 +2,7 @@ import "./ListItem.scss";
 import {Trash} from 'phosphor-react';
 
 interface TaskProps {
-  id: number
+  id?: number
   content: string
   isChecked: boolean
 }
