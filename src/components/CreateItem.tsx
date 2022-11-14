@@ -1,13 +1,28 @@
 import "./CreateItem.scss";
 import { ListItemOff } from "./ListItemOff";
 import { PlusCircle } from "phosphor-react";
+import { ChangeEvent, FormEvent, useState } from "react";
 
 export function CreateItem() {
+  const [newText , setNewText] = useState('')
+
+  function CreateItem(event : any)  {
+
+    event.preventDefault()
+    setNewText(newText)
+    console.log('ativo', newText);
+    setNewText('')
+    
+  }
+
+  function handleNewTask(event: ChangeEvent<HTMLInputElement>) {
+    setNewText(event.target.value);
+  }
   return (
     <main>
       <div className="todo">
-        <form className="todo__create">
-          <input type="text" placeholder="Adicione uma nova tarefa" />
+        <form className="todo__create" onSubmit={CreateItem} >
+          <input type="text" placeholder="Adicione uma nova tarefa"  name="tasks" value={newText} onChange={handleNewTask}/>
           <div className="todo__create__button">
             <button>
               Criar <PlusCircle size={20} />
